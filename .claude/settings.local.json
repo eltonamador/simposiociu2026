@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__plugin_context-mode_context-mode__ctx_fetch_and_index",
+      "mcp__plugin_context-mode_context-mode__ctx_search",
+      "Bash(curl -sL \"https://api.anthropic.com/v1/design/h/grsmv54yoB1eVumsCl9Iiw?open_file=index.html\" -o /tmp/design.bin)",
+      "Read(//tmp/**)",
+      "Bash(mkdir -p /tmp/design)",
+      "Bash(tar -xzf /tmp/design.bin -C /tmp/design)",
+      "Bash(cygpath -w /tmp/design/simposio-ciu)",
+      "mcp__plugin_context-mode_context-mode__ctx_execute",
+      "Bash(cp -r /tmp/design/simposio-ciu/project/assets/* public/assets/)",
+      "Bash(cp /tmp/design/simposio-ciu/project/styles.css app/globals.css)",
+      "Bash(npm install *)",
+      "Bash(npx tsc *)",
+      "Bash(npx next *)"
+    ]
+  }
+}
